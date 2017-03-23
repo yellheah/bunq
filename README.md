@@ -60,8 +60,8 @@ client.server_public_key = installation.server_public_key
 client = Bunq::Client.new do |config|
   config.api_key = '...'
   config.private_key = keys.private_key 
-  config.installation_token: '...'
-  config.server_public_key: '...'
+  config.installation_token = '...'
+  config.server_public_key = '...'
 end
 ```
 
