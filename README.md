@@ -113,7 +113,7 @@ Get a list of all payments done for a given monetary account.
 ```ruby
 user = client.users.get(1)
 monetary_account = user.monetary_account_bank.get(1)
-payments = monetary_account.payments.list
+payments = monetary_account.payments.list type: "IDEAL"
 ```
 
 ## Contributing
