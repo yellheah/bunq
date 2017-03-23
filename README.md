@@ -1,4 +1,4 @@
-# [WIP] this is (still) just a draft.
+# [WIP] this is a draft.
 
 # Bunq
 
@@ -41,7 +41,10 @@ To create an installation.
 # Create keypair
 keys = Bunq::KeyPair.generate
 
-client = Bunq::Client.new(api_key: '...', private_key: keys.private_key)
+client = Bunq::Client.new do |config|
+  config.api_key = '...'
+  config.private_key = keys.private_key
+end
 
 # Create installation
 installation = client.installations.create(keys.public_key)
@@ -54,7 +57,12 @@ client.server_public_key = installation.server_public_key
 ### Basic usage
 
 ```ruby
-client = Bunq::Client.new(api_key = '...', private_key: '...', installation_token: '...', server_public_key: '...')
+client = Bunq::Client.new do |config|
+  config.api_key = '...'
+  config.private_key = keys.private_key 
+  config.installation_token: '...'
+  config.server_public_key: '...'
+end
 ```
 
 ### Device server
