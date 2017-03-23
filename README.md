@@ -2,7 +2,7 @@
 
 # Bunq
 
-A Ruby client for the bunq API.
+A Ruby client for the [bunq API](https://doc.bunq.com).
 
 ## Installation
 
@@ -27,13 +27,9 @@ Or install it yourself as:
 ```ruby
 Bunq.configure do |config|
   config.api_key = '...'
-  config.url = 'https://sandbox.public.api.bunq.com'
+  config.url = 'https://api.bunq.com'
+  # config.url = 'https://sandbox.public.api.bunq.com' # Sandbox
   config.version = 'v1'
-  
-  # Sandbox
-  config.sandbox = true
-  config.username = ''
-  config.password = ''
 end
 ```
 
