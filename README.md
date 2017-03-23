@@ -99,12 +99,21 @@ user = client.users.get(1)
 
 ### Monetary account bank
 
-### Payment
-
-Get a list of all payments done from a given monetary account.
+Get a list of monetary account bank for a given user.
 
 ```ruby
-payments = client.payments.list
+user = client.users.get(1)
+monetary_accounts = user.monetary_account_bank.list
+```
+
+### Payment
+
+Get a list of all payments done for a given monetary account.
+
+```ruby
+user = client.users.get(1)
+monetary_account = user.monetary_account_bank.get(1)
+payments = monetary_account.payments.list
 ```
 
 ## Contributing
