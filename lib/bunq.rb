@@ -1,4 +1,5 @@
 require "bunq/version"
+require 'bunq/key_pair'
 require 'bunq/configuration'
 require 'bunq/client'
 
